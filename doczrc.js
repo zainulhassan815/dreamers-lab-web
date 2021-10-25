@@ -1,8 +1,7 @@
 export default {
   title: "Dreamers Lab",
   public: "/public",
-  dest: "/build",
-  base: "/docs",
+  dest: "/docs",
   propsParser: false,
   themeConfig: {
     search: true,
