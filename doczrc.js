@@ -2,7 +2,7 @@ export default {
   title: "Dreamers Lab",
   public: "/public",
   dest: "/docs",
-  base: '/dreamers-lab-web',
+  base: '/dreamers-lab-web/docs',
   propsParser: false,
   themeConfig: {
     search: true,
