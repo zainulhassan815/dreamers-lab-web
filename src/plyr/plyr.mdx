@@ -1,0 +1,258 @@
+---
+name: Plyr Video Player
+route: /extensions/plyr
+menu: Extensions
+tags: video, video player, player, multi audio player, custom video player, audio player, multiple qualitites
+---
+
+![Banner](./screenshots/banner.jpeg)
+
+# Plyr Video Player - Open Source
+Plyr is a simple and straightforward way to implement an awesome video player in your apps without worrying about state management. It has tone of features that make it stand out against other players in the market. You can freely use it in your personal & commercial projects. It is based on [Plyr.io](https://plyr.io/)
+
+[View On Github](https://github.com/zainulhassan815/plyrio)
+
+---
+
+## Screenshots
+
+![Screenshot1](./screenshots/screenshot_1.jpeg)
+![Screenshot2](./screenshots/screenshot_2.jpeg)
+![Screenshot1](./screenshots/screenshot_3.jpeg)
+
+---
+
+## Download
+
+**AIX :** [Kodular Community](https://community.kodular.io/t/v-2-0-6-plyr-video-player-fullscreen-qualities-captions-thumbnail-attaractive-ui/112735)
+
+**AIA :** [Kodular Community](https://community.kodular.io/t/v-2-0-6-plyr-video-player-fullscreen-qualities-captions-thumbnail-attaractive-ui/112735)
+
+---
+
+## Functions
+---
+
+> ![Initialize](./images/initialize.png)
+
+### Initialize
+Use this block to setup player inside an arrangement.
+
+***layout :*** arrangement
+
+***path :*** path to media file
+
+***thumbnail :*** image that you want to show as a thumbnail. Either offline or online
+
+***subtitle :*** subtitle path. File format should be SRT
+
+***subtitle language :*** language of subtitle file
+
+***media type :*** specify the type of media that you are using. Media Type blocks are given in the extension
+
+***controls :*** provide a list of controls that you want to show
+
+---
+
+> ![AddSubtitle](./images/add_subtitle.png)
+
+### Add Subtitle
+Add a new subtitle file. Multiple subtitle files are supported.
+
+***path :*** path to media file
+
+***language :*** language of subtitle file
+
+---
+
+> ![Play](./images/play.png)
+
+### Play Media
+
+---
+
+> ![Pause](./images/pause.png)
+
+### Pause Media
+
+---
+
+> ![Stop](./images/stop.png)
+
+### Stop Media
+Reset video to initial position.
+
+---
+
+> ![RemoveSubtitles](./images/remove_subtitles.png)
+
+### Remove Subtitles
+Remove all subtitles
+
+---
+
+> ![SeekForward](./images/forward.png)
+
+### Forward
+Seek forward.
+
+---
+
+> ![Rewind](./images/rewind.png)
+
+### Rewind
+Seek Backward or rewind.
+
+---
+
+> ![GetMetadata](./images/get_metadata.png)
+
+Get information about the current video. It returns a dictionary object that can easily be used with dictionary blocks to find specific information. It returns following info :
+
+- Path
+- Media Type
+- Thumbnail
+- Duration
+- List Of Qualities
+- Title of video
+
+---
+
+## Events
+---
+
+> ![OnReady](./images/on_ready.png)
+
+### On Ready
+Event Raised when video player is ready.
+
+---
+
+> ![OnPlay](./images/on_play.png)
+
+### On Play
+Event Raised when video is played.
+
+---
+
+> ![OnPause](./images/on_pause.png)
+
+### On Pause
+Event Raised when video is paused.
+
+---
+
+> ![OnComplete](./images/on_complete.png)
+
+### On Complete
+Event Raised when video is completed.
+
+---
+
+> ![TimeUpdate](./images/time_updated.png)
+
+### Time Updated
+Event Raised when current position of video is changed.
+
+---
+
+> ![TrackAdded](./images/track_added.png)
+
+### Track Added
+Event Raised when a new subtitle track is added to the player.
+
+---
+
+> ![GotMetadata](./images/got_metadata.png)
+
+### Got Metadata
+Event Raised when player returns an object of Metadata that you can use to find information about current video.
+
+---
+
+> ![GotText](./images/got_text.png)
+
+### Got Text
+This block returns the current caption text that you can use to show captions in custom view.
+
+---
+
+> ![LoadingState](./images/loading_state.png)
+
+### Loading State
+Event Raised when loading state of the player changes. You can use this to show some loading animation in custom design
+
+---
+
+> ![OnFullscreenChanged](./images/on_fullscreen_changed.png)
+
+### On Fullscreen Changed
+Event Raised when full screen state changes. You can use this to change orientation of screen.
+
+---
+
+> ![OnError](./images/on_error.png)
+
+### On Error
+Event Raised when there is an error.
+
+---
+
+## Properties
+---
+
+> ![Loop](./images/loop.png)
+
+### Loop
+Enable or disable loop.
+
+---
+
+> ![SetSource](./images/source.png)
+
+### Source
+Change video source.
+
+***Remember*** : It only works if you have not initially used a m3u8 link.
+
+---
+
+> ![CurrentQuality](./images/current_quality.png)
+
+### Current Quality
+Change the quality of the video. It works only when you are using a HLS file that has multiple qualities. It takes index of the quality.
+
+---
+
+> ![CaptionsVisible](./images/captions_visible.png)
+
+### Captions Visible
+Set the captions visible to true or false.
+
+---
+
+> ![CurrentTrack](./images/current_track.png)
+
+### Current Text Track
+Change current subtitles track. It accepts index of the track.
+
+---
+
+> ![Speed](./images/speed.png)
+
+### Speed
+Change the speed of the player.
+
+---
+
+> ![Thumbnail](./images/thumbnail.png)
+
+### Thumbnail
+Change the thumbnail of the video.
+
+---
+
+> ![Controls](./images/controls.jpeg)
+
+### Available Controls
+These are the controls that you can provide to player in initialize block.

@@ -1,0 +1,14 @@
+{
+  "name": "dreamers-lab",
+  "scripts": {
+    "docz:dev": "docz dev",
+    "docz:build": "docz build",
+    "docz:serve": "docz build && docz serve"
+  },
+  "dependencies": {
+    "@nejcm/docz-theme-extended": "^2.0.14",
+    "docz": "latest",
+    "react": "16.8.0",
+    "react-dom": "16.8.0"
+  }
+}

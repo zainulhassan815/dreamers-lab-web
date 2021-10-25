@@ -1,0 +1,312 @@
+---
+name: Exoplayer Core
+route: /extensions/exoplayer-core
+menu: Extensions
+tags: video, video player, player, multi audio player, custom video player, audio player
+---
+
+# Exoplayer Core - Open Source
+It provides all the basic and core features of Google Exoplayer Core library.
+
+[View On Github](https://github.com/zainulhassan815/exoplayer-appinventor)
+
+---
+
+## Download
+
+**AIX :** [Github](https://github.com/zainulhassan815/exoplayer-appinventor/tree/v1.0.4/exoplayer-core/out)
+
+**AIA :** [Github](https://github.com/zainulhassan815/exoplayer-appinventor/blob/v1.0.4/aia/exoplayer_with_title.aia)
+
+---
+
+## Functions
+
+---
+> ![Create Player](./images/create_player.png)
+
+### Create Player
+Create and initialize player. Must be called before using with Exoplayer UI.
+
+---
+
+> ![Get Exoplayer Instance](./images/get_player.png)
+
+### Get Exoplayer Instance
+Returns the Exoplayer instance that you can use in `Exoplayer UI - CreatePlayer`
+
+---
+
+> ![Add Media](./images/add_media.png)
+
+### Add Media
+Add a new media item to playlist. You can use this block to add multiple media items which are then managed by the player in the form of playlist.
+
+***path :***  path to media 
+
+***subtitles :*** list of subtitles
+
+---
+
+> ![Remove Media](./images/remove_media_item.png)
+
+### Remove Media
+Remove media item at specific index from playlist.
+
+***index :*** Index at which you want to remove media item
+
+---
+
+> ![Clear Media Items](./images/clear_media_items.png)
+
+### Clear Media Items
+Remove all media items from playlist.
+
+---
+
+> ![Play](./images/play.png)
+
+### Play
+Start media playback.
+
+---
+
+> ![Pause](./images/pause.png)
+
+### Pause
+Pause media playback.
+
+---
+
+> ![Stop](./images/stop.png)
+
+### Stop
+Stop current media item.
+
+---
+
+> ![Seek To](./images/seek_to.png)
+
+### Seek To
+Seek to specific milliseconds.
+
+***position :*** milliseconds
+
+---
+
+> ![Format](./images/format.png)
+
+### Format
+Convert milliseconds to hh:mm:ss format.
+
+***mills :*** milliseconds
+
+---
+
+## Events
+---
+
+> ![OnRenderFirstFrame](./images/on_render_first_frame.png)
+
+### On Render First Frame
+Event raised when player has rendered first media frame.
+
+---
+
+> ![OnStateChanged](./images/on_state_changed.png)
+
+### On State Changed
+Event raised when player state changes.
+
+***state :*** integer representing current state of player that you can compare it with Player States and perform suitable function
+
+---
+
+> ![OnIsPlayingChange](./images/on_is_playing_changed.png)
+
+### On Is Playing Changed
+Event raised when current playing state changes.
+
+***isPlaying :*** boolean
+
+---
+
+> ![OnLoadingChange](./images/on_loading_changed.png)
+
+### On Loading Change
+Event raised when loading state changes.
+
+***loading :*** boolean
+
+----
+
+> ![OnMediaItemTransition](./images/on_media_item_transition.png)
+>
+> ![TransitionReasons](./images/transition_reason.png)
+
+### On Media Item Transition
+Event raised when media item is changed. Basically when current video/audio is changed and player opens next media item from playlist.
+
+***mediaUrl :*** media url
+
+***reason :*** integer representing transition reason that you can compare with Transition Reason Getters and perform suitable functions.
+
+---
+
+> ![OnMetadataChanged](./images/on_metadata_changed.png)
+
+### On Metadata Changed
+Event raised when media metadata changes. You get a JSON response.
+
+***data :*** JSON response that you can manipulate using dictionaries
+
+---
+
+> ![OnRepeatModeChanged](./images/on_repeat_mode_changed.png)
+>
+> ![AvailableRepeatModes](./images/repeat_modes.png)
+
+### On Repeat Mode Changed
+Event raised when repeat mode changes.
+
+***repeatMode :*** integer representing RepeatMode that you can compare with RepeatModes properties and perform function as per your requirement
+
+---
+
+> ![OnShuffleModeEnabledChanged](./images/on_shuffle_mode_enabled_changed.png)
+
+### On Shuffle Mode Enabled Changed
+Event raised when shuffle mode changes.
+
+***enabled :*** boolean
+
+---
+
+> ![OnVideoSizeChanged](./images/on_video_size_changed.png)
+
+### On Video Size Changed
+Event raised when video size is changed or first measured.
+
+***width :*** video width in pixels
+
+***height :*** video height in pixels
+
+***pixelRatio :*** video size ratio
+
+***unAppliedRotationDegrees :*** degrees in float
+
+---
+
+> ![OnVolumeChanged](./images/on_volume_changed.png)
+
+### On Volume Changed
+Event raised when device volume changes.
+
+***volume :*** device volume (integer)
+
+***isMuted :*** boolean
+
+---
+
+> ![OnError](./images/on_error.png)
+
+### On Error
+Event raised when there is an error during media playback. Currently the block is not very efficient as it doesn’t provide proper detail for error. In the next version, I will try to error codes and respective error messages.
+
+***error :*** error message
+
+---
+
+## Properties
+---
+
+> ![RepeatModes](./images/set_repeat_modes.png)
+>
+> ![AvailableRepeatModes](./images/repeat_modes.png)
+
+### Set Repeat 
+Set repeat modes for player.
+
+---
+
+> ![PlayWhenReady](./images/play_when_ready.png)
+
+### Play When Ready
+Set whether to automatically play when player is ready or not.
+
+---
+
+> ![MediaDuration](./images/duration.png)
+
+### Media Duration
+
+---
+
+> ![CurrentPosition](./images/current_position.png)
+
+### Current Position
+
+---
+
+> ![BufferedLocation](./images/buffered_location.png)
+
+### Buffered Location
+
+---
+
+> ![IsLoading](./images/is_loading.png)
+
+### Is Loading
+
+---
+
+> ![IsPlaying](./images/is_playing.png)
+
+### Is Playing
+
+---
+
+> ![SelectionFlags](./images/selection_flags.png)
+
+### SelectionFlags
+These are used when adding subtitles.
+
+---
+
+## Fix Common Issues
+---
+
+### 1- Player won't work after screen off or app is minimized
+You can easily fix this issue by using the blocks given below :
+
+> ![Fix](./images/screen_off_fix.png)
+
+---
+
+### 2- How to add subtitles
+
+> ![AddMedia](./images/add_media.png)
+
+Add a new media item to playlist. You can use this block to add multiple media items which are then managed by the player in the form of playlist. For subtitles, you need to pass in a list of subtitles. Below is a detailed guide for adding subtitles.
+
+To add subtitles there are two ways :
+
+#### Dictionary Block
+
+> ![SubtitlesUsingDictionary](./images/subtitle_dictionary_sample.png)
+
+You can pass a list of subtitles by using dictionary blocks.
+Here only two parameters are required :
+
+- path
+- mime_type
+
+And the rest of the parameters are optional and you can skip them.
+
+#### JSON String
+
+> ![SubtitlesUsingJSON](./images/subtitle_json_sample.png)
+>
+> ![SubtitlesUsingJSONString](./images/subtitle_json_string_sample.png)
+>
+> ![SelectionFlags](./images/selection_flags.png)
